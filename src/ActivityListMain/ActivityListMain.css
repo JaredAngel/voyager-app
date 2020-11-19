@@ -1,0 +1,24 @@
+.ActivityListMain__button-container {
+  max-width: 380px;
+  margin: 10px 10px 10px 10px;
+}
+
+.ActivityListMain__add-activity-button {
+  margin: 10px auto 5px 5px;
+}
+
+.ActivityListMain__add-activity-button:hover {
+  background-color: #29862e;
+  color: white;
+}
+
+.ActivityListMain ul {
+  list-style-type: none;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+
+
+

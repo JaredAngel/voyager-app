@@ -1,0 +1,59 @@
+.ActivityListNav {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: paleturquoise;
+}
+
+.ActivityListNav__header {
+  text-align: right;
+  padding-right: 32px;
+  background-color: blueviolet;
+}
+
+.ActivityListNav a {
+  color: black;
+}
+
+.ActivityListNav__list {
+  list-style-type: none;
+  padding: 0;
+  background-color: palevioletred;
+}
+
+.ActivityListNav__voyage-link {
+  background-color: lightseagreen;
+  display: block;
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 70%;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.ActivityListNav__voyage-link:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.ActivityListNav__voyage-link.active {
+  background-color: seagreen;
+}
+
+.ActivityListNav__button-wrapper {
+  margin: 0 0 0 auto;
+  max-width: 180px;
+  background-color: peru;
+}
+
+.ActivityListNav__add-voyage-button {
+  margin: 10px auto 5px 5px;
+}
+.ActivityListNav__add-voyage-button:hover {
+  background-color: #29862e;
+  color: white;
+}
+
+.ActivityListNav__num-activities {
+  display: block;
+  float: right;
+  font-size: 18px;
+}

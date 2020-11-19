@@ -5,6 +5,8 @@ import ActivityPageNav from '../ActivityPageNav/ActivityPageNav';
 import ActivityListMain from '../ActivityListMain/ActivityListMain';
 import ActivityPageMain from '../ActivityPageMain/ActivityPageMain';
 import { findActivity, findVoyage, getActivitiesForVoyage } from '../activities-helper';
+import './App.css';
+
 import STORE from '../STORE';
 
 
@@ -55,7 +57,7 @@ class App extends React.Component {
   }
 
   renderMainRoutes() {
-    const { voyages, activities } = this.state;
+    const { activities } = this.state;
     return (
       <>
         {['/', '/voyage/:voyageId'].map(path => (
@@ -106,7 +108,7 @@ class App extends React.Component {
         <header className='App__header'>
           <h1>
             <Link to='/'>Voyager</Link>
-            <p>TO-DO: Add icon here</p>
+            {/* <p>TO-DO: Add icon here</p> */}
           </h1>
         </header>
         <main className='App__main'>
