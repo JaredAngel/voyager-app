@@ -1,0 +1,47 @@
+.ActivityPageNav {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: paleturquoise;
+}
+
+.ActivityPageNav__header {
+  text-align: right;
+  padding-right: 32px;
+  background-color: blueviolet;
+}
+
+.ActivityPageNav a {
+  color: black;
+}
+
+.ActivityPageNav__list {
+  list-style-type: none;
+  padding: 0;
+  background-color: palevioletred;
+}
+
+.ActivityPageNav__activity-link {
+  background-color: lightseagreen;
+  display: block;
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 70%;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.ActivityPageNav__activity-link:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.ActivityPageNav__activity-link.active {
+  background-color: seagreen;
+}
+
+.ActivityPageNav__back-button {
+  margin: 45px 20px 25px auto
+}
+
+.ActivityPageNav__back-button:hover {
+  background-color: #FFB72F;
+}

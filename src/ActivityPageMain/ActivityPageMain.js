@@ -1,5 +1,6 @@
 import React from 'react';
 import Activity from '../Activity/Activity';
+import './ActivityPageMain.css';
 
 class ActivityPageMain extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class ActivityPageMain extends React.Component {
           id={this.props.activity.id}
           name={this.props.activity.name}
           modified={this.props.activity.modified}
+          tag={this.props.activity.tag}
         />
         <div className='ActivityPageMain__content'>
           {this.props.activity.content.split(/\n \r|\n/).map((para, i) =>

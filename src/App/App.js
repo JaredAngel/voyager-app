@@ -25,7 +25,7 @@ class App extends React.Component {
     const { voyages, activities } = this.state;
     return (
       <>
-        {['/', '/voyage/:folderId'].map(path => (
+        {['/', '/voyage/:voyageId'].map(path => (
           <Route
             exact
             key={path}
@@ -44,9 +44,15 @@ class App extends React.Component {
             const { activityId } = routeProps.match.params;
             const activity = findActivity(activities, activityId) || {};
             const voyage = findVoyage(voyages, activity.voyageId);
+            const listActivities = activities.filter(activity =>
+              activity.voyageId === voyage.id);
 
             return (
-              <ActivityPageNav {...routeProps} voyage={voyage} />
+              <ActivityPageNav
+                {...routeProps}
+                voyage={voyage}
+                activities={listActivities}
+              />
             );
           }}
         />

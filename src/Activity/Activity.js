@@ -8,7 +8,7 @@ class Activity extends React.Component {
     return (
       <div className='Activity'>
         <h2 className='Activity__title'>
-          <Link to={`/note/${this.props.id}`}>
+          <Link to={`/activity/${this.props.id}`}>
             {this.props.name}
           </Link>
         </h2>

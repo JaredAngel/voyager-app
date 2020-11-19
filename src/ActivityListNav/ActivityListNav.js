@@ -8,7 +8,7 @@ class ActivityListNav extends React.Component {
     return (
       <div className='ActivityListNav'>
         <h2 className='ActivityListNav__header'>
-        <NavLink to='/'>My Voyages</NavLink>
+          <NavLink to='/'>My Voyages</NavLink>
         </h2>
         <ul className='ActivityListNav__list'>
           {this.props.voyages.map(voyage => 

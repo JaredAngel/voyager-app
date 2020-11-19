@@ -1,0 +1,10 @@
+.ActivityPageMain {
+  background-color: darkgreen;
+  height: 100%;
+  width: 100%;
+}
+
+.ActivityPageMain__content {
+  color: black;
+  max-width: 400px
+}
