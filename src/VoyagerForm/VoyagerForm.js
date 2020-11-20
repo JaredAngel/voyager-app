@@ -1,4 +1,5 @@
 import React from 'react';
+import './VoyagerForm.css';
 
 function VoyagerForm(props) {
   const { className, ...otherProps } = props;
