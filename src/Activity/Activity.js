@@ -44,18 +44,18 @@ class Activity extends React.Component {
 
 
   render() {
-    const { id, name, tag } = this.props;
+    const { id, title, label } = this.props;
     return (
       <div className='Activity'>
         <h2 className='Activity__title'>
           <Link to={`/activity/${id}`}>
-            {name}
+            {title}
           </Link>
         </h2>
         <article className='Activity__body group-row'>
           <div className='Activity__details item-triple'>
             <p className='Activity__label'>
-              Label: {tag}
+              Label: {label}
             </p>
           </div>
           <div className='Activity__actions item group-column'>

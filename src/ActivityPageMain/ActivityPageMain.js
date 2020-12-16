@@ -25,8 +25,8 @@ class ActivityPageMain extends React.Component {
       <section className='ActivityPageMain'>
         <Activity
           id={activity.id}
-          name={activity.name}
-          tag={activity.tag}
+          title={activity.title}
+          label={activity.label}
           onDeleteActivity={this.handleDeleteActivity}
         />
         <div className='ActivityPageMain__content'>

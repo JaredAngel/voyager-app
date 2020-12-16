@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ApiContext from '../ApiContext';
 import { countActivitiesForVoyage } from '../activities-helper';
 import './ActivityListNav.css';
@@ -34,7 +34,9 @@ class ActivityListNav extends React.Component {
           <button
             className='ActivityListNav__add-voyage-button'
             type='button'
-            tag={Link}
+            onClick={e => {
+              this.props.history.push('/add-voyage')
+            }}
             to='/add-voyage'
           >
             Add Voyage

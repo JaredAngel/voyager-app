@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Activity from '../Activity/Activity';
 import ApiContext from '../ApiContext'
 import { getActivitiesForVoyage } from '../activities-helper';
@@ -24,7 +23,9 @@ class ActivityListMain extends React.Component {
           <button
             className='ActivityListMain__add-activity-button'
             type='button'
-            tag={Link}
+            onClick={e => {
+              this.props.history.push('/add-activity')
+            }}
             to='/add-activity'
           >
             Add Activity
@@ -35,8 +36,8 @@ class ActivityListMain extends React.Component {
             <li key={activity.id}>
               <Activity
                 id={activity.id}
-                name={activity.name}
-                tag={activity.tag}
+                title={activity.title}
+                label={activity.label}
               />
             </li>
           )}

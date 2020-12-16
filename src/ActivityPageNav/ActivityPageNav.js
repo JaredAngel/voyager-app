@@ -23,13 +23,13 @@ class ActivityPageNav extends React.Component {
 
     return (
       <div className='ActivityPageNav'>
-        <h2 className='ActivityPageNav__header'>
+        {/* <h2 className='ActivityPageNav__header'>
           <NavLink
-            to={`/voyage/${voyage.id}`}
+            to={`/voyage/${activity.voyageId}`}
           >
-            {voyage.name}
+            {voyage.title}
           </NavLink>
-        </h2>
+        </h2> */}
         <ul className='ActivityPageNav__list'>
           {activities.map(activity =>
             <li key={activity.id}>
@@ -37,7 +37,7 @@ class ActivityPageNav extends React.Component {
                 className='ActivityPageNav__activity-link'
                 to={`/activity/${activity.id}`}
               >
-                {activity.name}
+                {activity.title}
               </NavLink>
             </li>
           )}
