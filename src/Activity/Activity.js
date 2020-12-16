@@ -6,7 +6,7 @@ import './Activity.css';
 
 class Activity extends React.Component {
   static defaultProps = {
-    onDelete: () => {},
+    onDeleteActivity: () => {},
   };
   static contextType = ApiContext;
 
@@ -14,26 +14,26 @@ class Activity extends React.Component {
     e.preventDefault();
     const activityId = this.props.id;
 
-    fetch(`${config.API_ENDPOINT}/api/activities/${activityId}`, {
+    fetch(`${config.API_ENDPOINT}/activities/${activityId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_ENDPOINT}`
+        //'authorization': `bearer ${config.API_ENDPOINT}`
       },
     })
       .then(res => {
         if(!res.ok) {
           return res
             .json()
-            .then(e => {
-              Promise.reject(e);
-            });
+            .then(e =>
+              Promise.reject(e)
+            );
         }
         return res.json();
       })
       .then(() => {
         this.context.deleteActivity(activityId)
-        this.props.onDeleteNote(activityId)
+        this.props.onDeleteActivity(activityId)
       })
       .catch(error => {
         console.error({ error });

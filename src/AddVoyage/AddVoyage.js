@@ -23,7 +23,7 @@ class AddVoyage extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_TOKEN}`
+        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(voyage),
     })
@@ -31,14 +31,14 @@ class AddVoyage extends React.Component {
         if(!res.ok) {
           return res
             .json()
-            .then(e => {
-              Promise.reject(e);
-            });
+            .then(e =>
+              Promise.reject(e)
+            );
         }
         return res.json;
       })
       .then(voyage => {
-        this.context.AddVoyage(voyage)
+        this.context.addVoyage(voyage)
         this.props.history.push(`/voyage/${voyage.id}`)
       })
       .catch(error => {

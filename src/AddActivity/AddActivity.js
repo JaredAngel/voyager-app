@@ -25,7 +25,7 @@ class AddActivity extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_TOKEN}`
+        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(newActivity),
     })
@@ -33,14 +33,14 @@ class AddActivity extends React.Component {
       if(!res.ok) {
         return res
           .json()
-          .then(e => {
-            Promise.reject(e);
-          });
+          .then(e =>
+            Promise.reject(e)
+          );
       }
       return res.json;
     })
     .then(activity => {
-      this.context.AddActivity(activity)
+      this.context.addActivity(activity)
       this.props.history.push(`/voyage/${activity.voyageId}`)
     })
     .catch(error => {

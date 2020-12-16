@@ -51,6 +51,11 @@ class ActivityPageNav extends React.Component {
           <br />
           Back
         </button>
+        {voyage && (
+          <h3 className='ActivityPageNav__voyage-title'>
+            {voyage.title}
+          </h3>
+        )}
       </div>
     );
   }

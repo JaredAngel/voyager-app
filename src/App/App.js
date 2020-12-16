@@ -25,16 +25,16 @@ class App extends React.Component {
         if(!activitiesRes.ok) {
           return activitiesRes
             .json()
-            .then(e => {
+            .then(e =>
               Promise.reject(e)
-            });
+            );
         }
         if(!voyagesRes.ok) {
           return voyagesRes
             .json()
-            .then(e => {
+            .then(e =>
               Promise.reject(e)
-            });
+            );
         }
         return Promise.all([
           activitiesRes.json(),
