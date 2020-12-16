@@ -1,20 +1,37 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import ApiContext from '../ApiContext';
+import { findActivity, findVoyage } from '../activities-helper';
 import './ActivityPageNav.css';
 
 class ActivityPageNav extends React.Component {
+  static defaultProps = {
+    history: {
+      goBack: () => { }
+    },
+    match: {
+      params: {}
+    }
+  };
+  static contextType = ApiContext;
+
   render() {
+    const { activities, voyages } = this.context;
+    const { activityId } = this.props.match.params;
+    const activity = findActivity(activities, activityId) || {};
+    const voyage = findVoyage(voyages, activity.voyageId);
+
     return (
       <div className='ActivityPageNav'>
         <h2 className='ActivityPageNav__header'>
           <NavLink
-            to={`/voyage/${this.props.voyage.id}`}
+            to={`/voyage/${voyage.id}`}
           >
-            {this.props.voyage.name}
+            {voyage.name}
           </NavLink>
         </h2>
         <ul className='ActivityPageNav__list'>
-          {this.props.activities.map(activity =>
+          {activities.map(activity =>
             <li key={activity.id}>
               <NavLink
                 className='ActivityPageNav__activity-link'
@@ -28,6 +45,8 @@ class ActivityPageNav extends React.Component {
         <button
           className='ActivityPageNav__back-button'
           onClick={() => this.props.history.goBack()}
+          role='link'
+          tag='button'
         >
           <br />
           Back
@@ -36,11 +55,5 @@ class ActivityPageNav extends React.Component {
     );
   }
 }
-
-ActivityPageNav.defaultProps = {
-  history: {
-    goBack: () => {}
-  }
-};
 
 export default ActivityPageNav;

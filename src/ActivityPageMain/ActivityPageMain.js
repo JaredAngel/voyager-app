@@ -1,30 +1,41 @@
 import React from 'react';
 import Activity from '../Activity/Activity';
+import ApiContext from '../ApiContext';
+import { findActivity } from '../activities-helper';
 import './ActivityPageMain.css';
 
 class ActivityPageMain extends React.Component {
+  static defaultProps = {
+    match: {
+      params: {}
+    }
+  };
+  static contextType = ApiContext;
+
+  handleDeleteActivity = activityId => {
+    this.props.history.push(`/`)
+  }
+
   render() {
+    const { activities = [] } = this.context;
+    const { activityId } = this.props.match.params;
+    const activity = findActivity(activities, activityId) || { content: '' };
+
     return (
       <section className='ActivityPageMain'>
         <Activity
-          id={this.props.activity.id}
-          name={this.props.activity.name}
-          modified={this.props.activity.modified}
-          tag={this.props.activity.tag}
+          id={activity.id}
+          name={activity.name}
+          tag={activity.tag}
+          onDeleteActivity={this.handleDeleteActivity}
         />
         <div className='ActivityPageMain__content'>
-          {this.props.activity.content.split(/\n \r|\n/).map((para, i) =>
+          {activity.content.split(/\n \r|\n/).map((para, i) =>
             <p key={i}>{para}</p>
           )}
         </div>
       </section>
     );
-  }
-}
-
-ActivityPageMain.defaultProps = {
-  activity: {
-    content: '',
   }
 }
 
