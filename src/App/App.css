@@ -16,7 +16,7 @@
 }
 
 .App__header {
-  background-color: rgb(56, 182, 224);
+  background-color: rgb(65, 151, 204);
   color: black;
   grid-area: header;
   /* Remove to play with Icon */
@@ -37,6 +37,6 @@
 }
 
 .App__nav {
-  background-color: rgb(56, 182, 224);
+  background-color: rgb(65, 151, 204);
 
 }
