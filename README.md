@@ -1,7 +1,7 @@
 # Voyager
 ### `Voyager-Client`
 
-[Live Webview](http://localhost:3000)
+[Live Webview](https://voyager-iota.vercel.app/)
 
 ---
 ## Summary
