@@ -11,7 +11,7 @@
   background-color: gray;
   color: black;
   grid-area: sidebar;
-  height: auto;
+  min-height: 100vh; /* added this line */
   overflow: auto;
 }
 
