@@ -18,8 +18,20 @@ class App extends React.Component {
 
   componentDidMount() {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/activities`),
-      fetch(`${config.API_ENDPOINT}/voyages`)
+      fetch(`${config.API_ENDPOINT}/activities`, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${config.API_TOKEN}`
+        }
+      }),
+      fetch(`${config.API_ENDPOINT}/voyages`, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${config.API_TOKEN}`
+        }
+      })
     ])
       .then(([activitiesRes, voyagesRes]) => {
         if(!activitiesRes.ok) {

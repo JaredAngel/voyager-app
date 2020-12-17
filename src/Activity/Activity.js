@@ -18,7 +18,7 @@ class Activity extends React.Component {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        //'authorization': `bearer ${config.API_ENDPOINT}`
+        'authorization': `bearer ${config.API_TOKEN}`
       },
     })
       .then(res => {

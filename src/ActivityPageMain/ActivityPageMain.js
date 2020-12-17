@@ -23,6 +23,18 @@ class ActivityPageMain extends React.Component {
 
     return (
       <section className='ActivityPageMain'>
+        <div className='ActivityListMain__button-container'>
+          <button
+            className='ActivityListMain__add-activity-button'
+            type='button'
+            onClick={e => {
+              this.props.history.push('/add-activity')
+            }}
+            to='/add-activity'
+          >
+            Add Activity
+          </button>
+        </div>
         <Activity
           id={activity.id}
           title={activity.title}
