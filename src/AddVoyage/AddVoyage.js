@@ -2,7 +2,7 @@ import React from 'react';
 import VoyagerForm from '../VoyagerForm/VoyagerForm';
 import ApiContext from '../ApiContext';
 import config from '../config';
-//import './AddVoyage.css
+import './AddVoyage.css'
 
 class AddVoyage extends React.Component {
   static defaultProps = {
@@ -22,7 +22,6 @@ class AddVoyage extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(voyage),
     })
@@ -72,4 +71,3 @@ class AddVoyage extends React.Component {
 }
 
 export default AddVoyage;
-

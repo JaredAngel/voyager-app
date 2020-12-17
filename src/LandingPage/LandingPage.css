@@ -1,0 +1,29 @@
+.LandingPage {
+  background-color: rgb(56, 182, 224);
+  max-width: 60%;
+  margin: auto;
+  margin-top: 10%;
+  min-height: 500px;
+  text-align: center;
+  border-radius: 180px 15px;
+  padding: 10px;
+}
+
+.LandingPage h2 {
+  background-color: orange;
+  border-radius: 30px 10px;
+}
+
+.LandingPage p {
+  margin: auto;
+  margin-top: 100px;
+  max-width: 400px;
+  font-weight: 600;
+}
+
+.Begin__Voyaging {
+  font-size: 150%;
+  margin-top: 100px;
+  background-color: rgb(231, 175, 69);
+  border-radius: 15px;
+}

@@ -16,7 +16,7 @@
 }
 
 .App__header {
-  background-color: white;
+  background-color: rgb(56, 182, 224);
   color: black;
   grid-area: header;
   /* Remove to play with Icon */
@@ -26,11 +26,17 @@
 
 /* TO color the hyper links within App */
 .App__header a {
-  color: black;
+  color: beige;
+  text-decoration: unset;
 }
 
 .App__main {
-  background-color: burlywood;
+  /* background-color: burlywood; */
   grid-area: main;
   overflow: auto;
+}
+
+.App__nav {
+  background-color: rgb(56, 182, 224);
+
 }

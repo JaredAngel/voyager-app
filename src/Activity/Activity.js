@@ -18,7 +18,6 @@ class Activity extends React.Component {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        //'authorization': `bearer ${config.API_TOKEN}`
       },
     })
       .then(res => {
@@ -39,7 +38,7 @@ class Activity extends React.Component {
       });
   }
 
-  // add handler function for 'share' in future projects
+  // add handler function for 'share'
 
 
   render() {
@@ -58,10 +57,6 @@ class Activity extends React.Component {
             </p>
           </div>
           <div className='Activity__actions item group-column'>
-            {/* <button className='Activity__share item' type='button'>
-              {' '}
-              Share
-            </button> */}
             <button 
               className='Activity__delete item'
               type='button'

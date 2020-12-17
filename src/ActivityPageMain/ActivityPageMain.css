@@ -1,10 +1,14 @@
 .ActivityPageMain {
-  background-color: darkgreen;
-  height: 100%;
-  width: 100%;
+  /* background-color: darkgreen; */
+  /* height: 100%; */
+  /* width: 100%; */
+  margin: 10px;
 }
 
 .ActivityPageMain__content {
-  color: black;
-  max-width: 400px
+  background-color: rgb(173, 119, 18);
+  padding: 10px;
+  font-weight: 600;
+  color: beige;
+  max-width: 600px
 }

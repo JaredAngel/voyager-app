@@ -1,51 +1,55 @@
 .ActivityListNav {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: paleturquoise;
+  /* background-color: paleturquoise; */
 }
 
 .ActivityListNav__header {
   text-align: right;
   padding-right: 32px;
-  background-color: blueviolet;
+  /* background-color: rgb(173, 119, 18); */
 }
 
 .ActivityListNav a {
-  color: black;
+  color: beige;
 }
 
 .ActivityListNav__list {
   list-style-type: none;
   padding: 0;
-  background-color: palevioletred;
+  /* background-color: palevioletred; */
 }
 
 .ActivityListNav__voyage-link {
-  background-color: lightseagreen;
+  background-color: rgb(173, 119, 18);
+  border-radius: 15px 0 0 15px;
   display: block;
   font-size: 20px;
-  margin: 0 0 8px auto;
+  margin: 0 15px 8px auto;
   max-width: 70%;
   padding: 8px 16px;
   text-decoration: none;
 }
 
 .ActivityListNav__voyage-link:hover {
-  color: blue;
+  color: lightgreen;
   cursor: pointer;
 }
 
 .ActivityListNav__voyage-link.active {
-  background-color: seagreen;
+  background-color: orange;
 }
 
 .ActivityListNav__button-wrapper {
   margin: 0 0 0 auto;
   max-width: 180px;
-  background-color: peru;
+  /* background-color: peru; */
 }
 
 .ActivityListNav__add-voyage-button {
   margin: 10px auto 5px 5px;
+  background-color: orange;
+  border-radius: 15px;
+  font-size: 18px;
 }
 .ActivityListNav__add-voyage-button:hover {
   background-color: #29862e;

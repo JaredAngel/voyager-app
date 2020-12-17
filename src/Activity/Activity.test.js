@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import Activity from './Activity';
 
-it('renders App component', () => {
+it('renders Activity component', () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
-      <App/>
-    </BrowserRouter>, 
-    div);
+      <Activity />
+    </BrowserRouter>, div 
+  );
   ReactDOM.unmountComponentAtNode(div);
 });

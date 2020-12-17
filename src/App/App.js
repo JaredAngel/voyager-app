@@ -22,14 +22,14 @@ class App extends React.Component {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
-          //'authorization': `bearer ${config.API_TOKEN}`
+          'authorization': `bearer ${config.API_TOKEN}`
         }
       }),
       fetch(`${config.API_ENDPOINT}/voyages`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
-          //'authorization': `bearer ${config.API_TOKEN}`
+          'authorization': `bearer ${config.API_TOKEN}`
         }
       })
     ])

@@ -1,9 +1,9 @@
 .Activity {
+  background-color: rgb(173, 119, 18);
   font-family: Arial, Helvetica, sans-serif;
-  background-color: cadetblue;
   height: 100px;
   margin-bottom: 8px;
-  max-width: 380px;
+  max-width: 600px;
   padding: 8px;
   position: relative;
 }
@@ -16,13 +16,13 @@
 }
 
 .Activity__title a {
-  color: black;
+  color: beige;
   display: block;
   text-decoration: none;
 }
 
 .Activity__title a:hover {
-  color: blue;
+  color: lightgreen;
 }
 
 .Activity__body {
@@ -31,13 +31,14 @@
 }
 
 .Activity__details {
-  background-color: orchid;
+  /* background-color: orchid; */
   color: black;
+  font-weight: 600;
 }
-
+/* 
 .Activity__actions {
   background-color: palegreen;
-}
+} */
 
 .Activity__actions button {
   background-color: gray;

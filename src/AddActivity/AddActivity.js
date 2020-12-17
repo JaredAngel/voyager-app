@@ -2,7 +2,7 @@ import React from 'react';
 import VoyagerForm from '../VoyagerForm/VoyagerForm';
 import ApiContext from '../ApiContext';
 import config from '../config';
-// import './AddActivity.css';
+import './AddActivity.css';
 
 class AddActivity extends React.Component {
   static defaultProps = {
@@ -24,7 +24,6 @@ class AddActivity extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(newActivity),
     })
@@ -86,7 +85,6 @@ class AddActivity extends React.Component {
               <option value='Educational'>Educational</option>
             </select>
           </div>
-
           <div className='field'>
             <label htmlFor='activity-voyage-select'>
               Voyage

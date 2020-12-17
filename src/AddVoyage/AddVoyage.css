@@ -1,0 +1,10 @@
+.AddVoyage {
+  padding: 10px;
+}
+
+.AddVoyage > h2 {
+  background-color: rgb(173, 119, 18);
+  max-width: 365px;
+  color: beige;
+  text-align: center;
+}

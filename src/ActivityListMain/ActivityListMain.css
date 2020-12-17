@@ -5,6 +5,9 @@
 
 .ActivityListMain__add-activity-button {
   margin: 10px auto 5px 5px;
+  background-color: orange;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
 .ActivityListMain__add-activity-button:hover {
@@ -17,8 +20,3 @@
   margin: 5px;
   padding: 10px;
 }
-
-
-
-
-
