@@ -4,6 +4,6 @@ export default React.createContext({
   activities: [],
   voyages: [],
   addVoyage: () => {},
-  addActivities: () => {},
+  addActivity: () => {},
   deleteActivity: () => {},
 });

@@ -18,18 +18,23 @@ class ActivityPageNav extends React.Component {
   render() {
     const { activities, voyages } = this.context;
     const { activityId } = this.props.match.params;
+    console.log('acts',activities)
+    console.log('voys', voyages);
+    console.log('actId', 1, activityId);
     const activity = findActivity(activities, activityId) || {};
-    const voyage = findVoyage(voyages, activity.voyageId);
+    const voyage = findVoyage(voyages, activity.voyage_id);
+    console.log('act', activity);
+    console.log('voy', voyage);
 
     return (
       <div className='ActivityPageNav'>
-        {/* <h2 className='ActivityPageNav__header'>
+        <h2 className='ActivityPageNav__header'>
           <NavLink
-            to={`/voyage/${activity.voyageId}`}
+            to={`/voyage/${activity.voyage_id}`}
           >
             {voyage.title}
           </NavLink>
-        </h2> */}
+        </h2>
         <ul className='ActivityPageNav__list'>
           {activities.map(activity =>
             <li key={activity.id}>
@@ -51,11 +56,6 @@ class ActivityPageNav extends React.Component {
           <br />
           Back
         </button>
-        {voyage && (
-          <h3 className='ActivityPageNav__voyage-title'>
-            {voyage.title}
-          </h3>
-        )}
       </div>
     );
   }

@@ -132,7 +132,7 @@ class App extends React.Component {
       activities: this.state.activities,
       voyages: this.state.voyages,
       addVoyage: this.handleAddVoyage,
-      AddActivity: this.handleAddActivity,
+      addActivity: this.handleAddActivity,
       deleteActivity: this.handleDeleteActivity,
     };
 

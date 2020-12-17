@@ -18,8 +18,7 @@ class AddActivity extends React.Component {
       title: e.target['activity-title'].value,
       content: e.target['activity-content'].value,
       label: e.target['activity-label'].value,
-      voyageId: e.target['activity-voyage-id'].value,
-      //authorId: e.target['activity-author-id'].value
+      voyage_id: e.target['activity-voyage-id'].value,
     };
     fetch(`${config.API_ENDPOINT}/activities`, {
       method: 'POST',
@@ -37,11 +36,11 @@ class AddActivity extends React.Component {
             Promise.reject(e)
           );
       }
-      return res.json;
+      return res.json();
     })
     .then(activity => {
       this.context.addActivity(activity)
-      this.props.history.push(`/voyage/${activity.voyageId}`)
+      this.props.history.push(`/voyage/${activity.voyage_id}`)
     })
     .catch(error => {
       console.error({ error })

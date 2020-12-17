@@ -29,7 +29,6 @@ class Activity extends React.Component {
               Promise.reject(e)
             );
         }
-        return res.json();
       })
       .then(() => {
         this.context.deleteActivity(activityId)

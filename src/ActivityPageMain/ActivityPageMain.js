@@ -19,7 +19,7 @@ class ActivityPageMain extends React.Component {
   render() {
     const { activities = [] } = this.context;
     const { activityId } = this.props.match.params;
-    const activity = findActivity(activities, activityId) || { content: '' };
+    const activity = findActivity(activities, parseInt(activityId)) || { content: '' };
 
     return (
       <section className='ActivityPageMain'>

@@ -25,7 +25,7 @@ class ActivityListNav extends React.Component {
                 <span className='ActivityListNav__num-activities'>
                   {countActivitiesForVoyage(activities, voyage.id)}
                 </span>
-                {voyage.name}
+                {voyage.title}
               </NavLink>
             </li>
           )}

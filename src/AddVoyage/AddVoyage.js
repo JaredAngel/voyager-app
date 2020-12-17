@@ -35,7 +35,7 @@ class AddVoyage extends React.Component {
               Promise.reject(e)
             );
         }
-        return res.json;
+        return res.json();
       })
       .then(voyage => {
         this.context.addVoyage(voyage)
