@@ -12,9 +12,9 @@ Voyager acts as a centralized travel journal for places that you have been, plan
 
 ## Screenshots
 
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg)
+![Alt landingPage](./src/images/landingPage.jpg)
+![Alt main](./src/images/main.jpg)
+![Alt activities](./src/images/addActivity.jpg)
 
 ---
 
