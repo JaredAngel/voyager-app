@@ -24,7 +24,7 @@ class AddActivity extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_TOKEN}`
+        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(newActivity),
     })
@@ -73,16 +73,18 @@ class AddActivity extends React.Component {
               name='activity-content'
             />
           </div>
-          {/*make into a dropdown selection */}
           <div className='field'>
             <label htmlFor='activity-label-input'>
               Label
             </label>
-            <input 
-              type='text'
-              id='activity-label-input'
-              name='activity-label'
-            />
+            <select id='activity-label-input' name='activity-label'>
+              <option key={null}>Select One</option>
+              <option value='Dining'>Dining</option>
+              <option value='Landmark'>Landmark</option>
+              <option value='Recreation'>Recreation</option>
+              <option value='Night-life'>Night-life</option>
+              <option value='Educational'>Educational</option>
+            </select>
           </div>
 
           <div className='field'>

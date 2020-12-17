@@ -22,7 +22,7 @@ class AddVoyage extends React.Component {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_TOKEN}`
+        //'authorization': `bearer ${config.API_TOKEN}`
       },
       body: JSON.stringify(voyage),
     })
